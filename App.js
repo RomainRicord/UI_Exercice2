@@ -12,12 +12,13 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: 'rgb(24,24,24)',
+    primary: 'rgb(0,0,0)',
     accent: 'yellow',
   },
 };
 
-const HomeRoute = () => (<ScrollView style={{flex:1}}><ImageBackground source={{uri:'https://c4.wallpaperflare.com/wallpaper/339/583/673/retro-style-1980s-neon-city-wallpaper-preview.jpg'}}>
+const HomeRoute = () => (<ScrollView style={{flex:1}}><ImageBackground source={{uri:'https://images.hdqwalls.com/wallpapers/asia-neon-city-lights-reflections-01.jpg'}}>
+<Text style={{color:'white',fontWeight:'bold',fontSize:32,marginTop:20,marginBottom:20,textDecorationLine:'underline',textAlign:'center'}}>Home</Text>
 {data.map((e,k) => {
 
   const {title,date,distance,duration,picture} = e
@@ -49,6 +50,14 @@ const App = () => {
     { key: 'params', title: "Params'", icon: 'cog-outline' }
   ]);
 
+  const list = [
+    {
+      test:'test',
+    }
+  ]
+
+  list.map
+
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     histo: HistoRoute,
@@ -59,7 +68,7 @@ const App = () => {
   return (
     <PaperProvider style={{flex:1}}>
     <Appbar theme={theme} style={styles.bottom}>
-      <Text style={{color:'purple',fontSize:30,fontWeight:'bold'}}>Activity Tracker</Text>
+      <Text style={{color:'#7a34eb',fontSize:30,fontWeight:'bold'}}>Activity Tracker</Text>
       <Avatar.Text size={60} label="Avatar" labelStyle={{fontSize:10}} />
     </Appbar>
     
@@ -67,6 +76,7 @@ const App = () => {
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
       renderScene={renderScene}
+      barStyle={{backgroundColor:'black'}}
     />
     <StatusBar/>
     </PaperProvider>
