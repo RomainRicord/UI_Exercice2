@@ -17,7 +17,7 @@ const theme = {
   },
 };
 
-const HomeRoute = () => (<ScrollView style={{flex:1}}><ImageBackground source={{uri:'https://images.hdqwalls.com/wallpapers/asia-neon-city-lights-reflections-01.jpg'}}>
+const HomeRoute = () => (<View style={{flex:1}}><ImageBackground style={{flex:1,justifyContent:'center'}} resizeMode='cover' source={{uri:'https://images.hdqwalls.com/wallpapers/asia-neon-city-lights-reflections-01.jpg'}}><ScrollView style={{flex:1}}>
 <Text style={{color:'white',fontWeight:'bold',fontSize:32,marginTop:20,marginBottom:20,textDecorationLine:'underline',textAlign:'center'}}>Home</Text>
 {data.map((e,k) => {
 
@@ -28,8 +28,8 @@ const HomeRoute = () => (<ScrollView style={{flex:1}}><ImageBackground source={{
   )
 
 })}
-</ImageBackground>
-</ScrollView>)
+
+</ScrollView></ImageBackground></View>)
 
 const HistoRoute = () => <View></View>
 
@@ -68,8 +68,8 @@ const App = () => {
   return (
     <PaperProvider style={{flex:1}}>
     <Appbar theme={theme} style={styles.bottom}>
-      <Text style={{color:'#7a34eb',fontSize:30,fontWeight:'bold'}}>Activity Tracker</Text>
-      <Avatar.Text size={60} label="Avatar" labelStyle={{fontSize:10}} />
+      <Text style={{color:'#7a34eb',fontSize:30,fontWeight:'bold',marginLeft:40}}>Activity Tracker</Text>
+      <Avatar.Text style={{marginRight:40}}size={60} label="Avatar" labelStyle={{fontSize:10}} />
     </Appbar>
     
     <BottomNavigation
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   bottom: {
     display:'flex',
-    justifyContent:'space-around',
+    justifyContent:'space-between',
     height:80
   },
   title: {
