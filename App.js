@@ -50,14 +50,6 @@ const App = () => {
     { key: 'params', title: "Params'", icon: 'cog-outline' }
   ]);
 
-  const list = [
-    {
-      test:'test',
-    }
-  ]
-
-  list.map
-
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     histo: HistoRoute,
