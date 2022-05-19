@@ -5,14 +5,14 @@ const CardComponent = (props) => {
 
     const {title,date,duration,distance,picture} = props
 
-    return(<Card style={{height:220,margin:20,borderColor:'#7a34eb',borderWidth:2,borderRadius:20,backgroundColor:'rgba(0,0,0,0.8)'}}>
+    return(<Card style={{display:'flex',height:220,margin:20,borderColor:'#7a34eb',borderWidth:2,borderRadius:20,backgroundColor:'rgba(0,0,0,0.8)'}}>
     <View style={{display:'flex',flex:1,flexDirection:'column',justifyContent:'space-between'}}>
-      <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
-      <Card.Content >
-        <Paragraph style={{color:'white',marginTop:10}}>{date}</Paragraph>
-        <Title style={{color:'white'}}>{title}</Title>
-      </Card.Content>
-      <Card.Cover source={{ uri: picture }} style={{width:150,height:100,margin:20,borderWidth:1,borderColor:'#7a34eb',borderRadius:20}}/>
+      <View style={{display:'flex',flex:1,flexDirection:'row',justifyContent:'space-between',flex:1}}>
+        <Card.Content style={{flex:2}}>
+            <Paragraph style={{color:'white',marginTop:10}}>{date}</Paragraph>
+            <Title style={{color:'white'}}>{title}</Title>
+        </Card.Content>
+        <Card.Cover source={{ uri: picture }} style={{display:'flex',flex:1,width:150,height:100,margin:20,borderWidth:1,borderColor:'#7a34eb',borderRadius:20}}/>
       </View>
       <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
         <Card.Content>
