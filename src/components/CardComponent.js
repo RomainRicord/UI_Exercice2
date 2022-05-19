@@ -1,7 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Appbar,Avatar,Card,Title, Paragraph } from 'react-native-paper';
-import { DefaultTheme,Provider as PaperProvider } from 'react-native-paper';
+import { StyleSheet, View } from 'react-native';
+import { Card,Title, Paragraph } from 'react-native-paper';
 
 const CardComponent = (props) => {
 
